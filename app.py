@@ -167,35 +167,56 @@ if uploaded_file is not None:
 else:
     st.info("Awaiting inbound video data stream... Please upload a file to begin the compression sequence.")
 
-# --- Developer / Recruiter Information Section ---
+# --- Developer / Recruiter Information Section (REVISED for stability!) ---
 st.markdown("---") # Separator before the new section
-st.markdown(
-    """
-    <div class="creator-nexus">
-        <h3 class="nexus-title">🚀 CREATOR NEXUS: Engaging Quantum Talent 🚀</h3>
+
+# Use st.container to group elements visually (optional, but good practice)
+with st.container():
+    st.markdown('<div class="creator-nexus">', unsafe_allow_html=True) # Start outer div
+
+    st.markdown('<h3 class="nexus-title">🚀 CREATOR NEXUS: Engaging Quantum Talent 🚀</h3>', unsafe_allow_html=True)
+    st.markdown(
+        """
         <p class="nexus-intro">
             This Chronos-Compressor module was engineered by a human innovator
             specializing in **data-driven solutions and intuitive analytical architectures.**
         </p>
+        """,
+        unsafe_allow_html=True
+    )
 
-        <div class="developer-card">
-            <h4 class="card-name">🌌 Samuel Amoakoh 🌌</h4>
-            <p class="card-role">
-                <strong>System Architect | Data Integrator | UX Visionary</strong>
-                <br>
-                Empowering organizations to navigate complex data streams and derive actionable intelligence through robust and elegant applications.
-            </p>
-            <p class="card-contact">
-                <span class="contact-label">// DATA TRANSMISSION PROTOCOLS //</span>
-                <br>
-                <a href="mailto:p.samuelamoakoh@gmail.com" class="contact-link">📧 p.samuelamoakoh@gmail.com</a>
-                <br>
-                <a href="https://www.linkedin.com/in/samuel-amoakoh" target="_blank" class="contact-link">🔗 LinkedIn: /in/samuel-amoakoh</a>
-                <br>
-                <a href="https://github.com/amoakoh22" target="_blank" class="contact-link">💻 GitHub: /amoakoh22</a>
-            </p>
-        </div>
+    # Developer Card
+    st.markdown('<div class="developer-card">', unsafe_allow_html=True) # Start developer card div
+    st.markdown('<h4 class="card-name">🌌 Samuel Amoakoh 🌌</h4>', unsafe_allow_html=True)
+    st.markdown(
+        """
+        <p class="card-role">
+            <strong>System Architect | Data Integrator | UX Visionary</strong>
+            <br>
+            Empowering organizations to navigate complex data streams and derive actionable intelligence through robust and elegant applications.
+        </p>
+        """,
+        unsafe_allow_html=True
+    )
+    st.markdown(
+        """
+        <p class="card-contact">
+            <span class="contact-label">// DATA TRANSMISSION PROTOCOLS //</span>
+            <br>
+            <a href="mailto:p.samuelamoakoh@gmail.com" class="contact-link">📧 p.samuelamoakoh@gmail.com</a>
+            <br>
+            <a href="https://www.linkedin.com/in/samuel-amoakoh" target="_blank" class="contact-link">🔗 LinkedIn: /in/samuel-amoakoh</a>
+            <br>
+            <a href="https://github.com/amoakoh22" target="_blank" class="contact-link">💻 GitHub: /amoakoh22</a>
+        </p>
+        """,
+        unsafe_allow_html=True
+    )
+    st.markdown('</div>', unsafe_allow_html=True) # End developer card div
 
+    # AI Attribution
+    st.markdown(
+        """
         <p class="ai-attribution">
             <span class="ai-label">✨ AI-Augmented Development Log:</span>
             <br>
@@ -203,10 +224,11 @@ st.markdown(
             specifically <strong style="color:#FFD700;">Gemini AI</strong>. Leveraging its synthetic intelligence accelerated
             design iteration and optimized structural integrity.
         </p>
-    </div>
-    """,
-    unsafe_allow_html=True # THIS IS CRUCIAL FOR HTML RENDERING
-)
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown('</div>', unsafe_allow_html=True) # End outer div
 st.markdown("---") # Final separator
 
 # --- Footer with a Futuristic Touch (Updated!) ---
