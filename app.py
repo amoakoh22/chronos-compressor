@@ -167,7 +167,7 @@ if uploaded_file is not None:
 else:
     st.info("Awaiting inbound video data stream... Please upload a file to begin the compression sequence.")
 
-# --- Developer / Recruiter Information Section (New!) ---
+# --- Developer / Recruiter Information Section ---
 st.markdown("---") # Separator before the new section
 st.markdown(
     """
@@ -205,10 +205,10 @@ st.markdown(
         </p>
     </div>
     """,
-    unsafe_allow_html=True
+    unsafe_allow_html=True # Ensure this is present and correct for the entire block
 )
 st.markdown("---") # Final separator
 
-# --- Footer with a Futuristic Touch ---
+# --- Footer with a Futuristic Touch (Updated!) ---
 st.markdown("🌐 Chronos-Compressor v1.0 | A product of VibeCoding and Ingenuity | Ensuring efficient data transmission across all galaxies.")
 st.markdown("<p style='font-size:0.8em; text-align:center;'>Powered by Streamlit and MoviePy's time-bending capabilities.</p>", unsafe_allow_html=True)
