@@ -1,23 +1,20 @@
 body {
-    background-color: #0d0d1a; /* Darker background for the app */
-    color: #E0E0E0; /* Light grey for general text */
+    background-color: #0d0d1a;
+    color: #E0E0E0;
 }
 
-/* Specific styling for the main Streamlit app container */
 .stApp {
-    background-color: #0d0d1a; /* Darker background for the entire app */
+    background-color: #0d0d1a;
 }
 
-/* Futuristic title styling */
 .futuristic-title {
     font-size: 3em;
     text-align: center;
-    color: #00FFFF; /* Aqua - common futuristic color */
+    color: #00FFFF;
     text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
     margin-bottom: 0.5em;
 }
 
-/* Futuristic subtitle styling */
 .futuristic-subtitle {
     font-size: 1.2em;
     text-align: center;
@@ -25,18 +22,16 @@ body {
     margin-bottom: 2em;
 }
 
-/* Styling for the file uploader widget */
 .stFileUploader {
-    background-color: #1a1a2e; /* Darker background for sections */
+    background-color: #1a1a2e;
     border-radius: 10px;
     padding: 20px;
     border: 2px solid #00FFFF;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
-/* Styling for the download button */
 .stDownloadButton button {
-    background-color: #00FF00; /* Green for download */
+    background-color: #00FF00;
     color: black;
     font-weight: bold;
     border-radius: 8px;
@@ -47,30 +42,26 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/* Hover effect for the download button */
 .stDownloadButton button:hover {
     background-color: #00CC00;
     box-shadow: 0 0 15px rgba(0, 255, 0, 1);
     transform: scale(1.05);
 }
 
-/* Styling for the video preview element */
 .stVideo {
-    border: 2px solid #8A2BE2; /* Purple border for video preview */
+    border: 2px solid #8A2BE2;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(138, 43, 226, 0.7);
 }
 
-/* Styling for the progress bar */
 .stProgress > div > div > div > div {
-    background-color: #FFD700; /* Gold for progress bar */
+    background-color: #FFD700;
     border-radius: 5px;
 }
 
-/* Styling for the custom save notification */
 .save-notification {
-    background-color: #2e0050; /* Dark purple */
-    border-left: 5px solid #8A2BE2; /* Matching purple border */
+    background-color: #2e0050;
+    border-left: 5px solid #8A2BE2;
     padding: 15px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -79,25 +70,24 @@ body {
     color: #E0E0E0;
 }
 
-/* Strong text within the save notification */
 .save-notification strong {
-    color: #FFD700; /* Gold for emphasis */
+    color: #FFD700;
 }
 
 /* --- New Developer/Recruiter Section Styles --- */
 .creator-nexus {
-    background-color: #1a1a2e; /* Dark background */
+    background-color: #1a1a2e;
     border-radius: 12px;
     padding: 30px;
     margin-top: 50px;
-    border: 2px solid #8A2BE2; /* Purple border */
-    box-shadow: 0 0 25px rgba(138, 43, 226, 0.7); /* Stronger glow */
+    border: 2px solid #8A2BE2;
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.7);
     text-align: center;
 }
 
 .nexus-title {
     font-size: 2.2em;
-    color: #00FFFF; /* Aqua */
+    color: #00FFFF;
     text-shadow: 0 0 8px #00FFFF, 0 0 15px #00FFFF;
     margin-bottom: 1em;
 }
@@ -110,18 +100,18 @@ body {
 }
 
 .developer-card {
-    background-color: #0d0d1a; /* Even darker inner card */
+    background-color: #0d0d1a;
     border-radius: 10px;
     padding: 25px;
-    border: 1px solid #00FFFF; /* Aqua border */
+    border: 1px solid #00FFFF;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-    margin: 0 auto 2em auto; /* Center the card, add bottom margin */
-    max-width: 600px; /* Constrain width for better readability */
+    margin: 0 auto 2em auto;
+    max-width: 600px;
 }
 
 .card-name {
     font-size: 1.8em;
-    color: #FFD700; /* Gold */
+    color: #FFD700;
     text-shadow: 0 0 5px #FFD700;
     margin-bottom: 0.5em;
 }
@@ -134,34 +124,34 @@ body {
 }
 
 .contact-label {
-    color: #00FF00; /* Green */
+    color: #00FF00;
     font-weight: bold;
     font-size: 0.9em;
     letter-spacing: 0.05em;
 }
 
 .contact-link {
-    color: #A0EEFF; /* Light blue */
+    color: #A0EEFF;
     text-decoration: none;
     font-size: 1.1em;
     margin-top: 0.5em;
-    display: block; /* Each link on new line */
+    display: block;
     transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
 }
 
 .contact-link:hover {
-    color: #00FFFF; /* Aqua on hover */
+    color: #00FFFF;
     text-shadow: 0 0 5px #00FFFF;
 }
 
 .ai-attribution {
     font-size: 0.95em;
-    color: #B0B0B0; /* Slightly muted for attribution */
+    color: #B0B0B0;
     margin-top: 2em;
     line-height: 1.4;
 }
 
 .ai-label {
     font-weight: bold;
-    color: #FFD700; /* Gold for emphasis */
+    color: #FFD700;
 }

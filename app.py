@@ -205,7 +205,7 @@ st.markdown(
         </p>
     </div>
     """,
-    unsafe_allow_html=True # Ensure this is present and correct for the entire block
+    unsafe_allow_html=True # THIS IS CRUCIAL FOR HTML RENDERING
 )
 st.markdown("---") # Final separator
 
