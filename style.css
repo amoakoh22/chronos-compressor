@@ -1,0 +1,85 @@
+body {
+    background-color: #0d0d1a; /* Darker background for the app */
+    color: #E0E0E0; /* Light grey for general text */
+}
+
+/* Specific styling for the main Streamlit app container */
+.stApp {
+    background-color: #0d0d1a; /* Darker background for the entire app */
+}
+
+/* Futuristic title styling */
+.futuristic-title {
+    font-size: 3em;
+    text-align: center;
+    color: #00FFFF; /* Aqua - common futuristic color */
+    text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
+    margin-bottom: 0.5em;
+}
+
+/* Futuristic subtitle styling */
+.futuristic-subtitle {
+    font-size: 1.2em;
+    text-align: center;
+    color: #A0EEFF;
+    margin-bottom: 2em;
+}
+
+/* Styling for the file uploader widget */
+.stFileUploader {
+    background-color: #1a1a2e; /* Darker background for sections */
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid #00FFFF;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+/* Styling for the download button */
+.stDownloadButton button {
+    background-color: #00FF00; /* Green for download */
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for the download button */
+.stDownloadButton button:hover {
+    background-color: #00CC00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 1);
+    transform: scale(1.05);
+}
+
+/* Styling for the video preview element */
+.stVideo {
+    border: 2px solid #8A2BE2; /* Purple border for video preview */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.7);
+}
+
+/* Styling for the progress bar */
+.stProgress > div > div > div > div {
+    background-color: #FFD700; /* Gold for progress bar */
+    border-radius: 5px;
+}
+
+/* Styling for the custom save notification */
+.save-notification {
+    background-color: #2e0050; /* Dark purple */
+    border-left: 5px solid #8A2BE2; /* Matching purple border */
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+    color: #E0E0E0;
+}
+
+/* Strong text within the save notification */
+.save-notification strong {
+    color: #FFD700; /* Gold for emphasis */
+}

@@ -18,77 +18,15 @@ st.set_page_config(
     layout="centered"
 )
 
+# --- Inject Custom CSS ---
+# Load the custom CSS file and inject it into the Streamlit app
+# This assumes style.css is in the same directory as app.py
+with open("style.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
 # --- Header Section with Futuristic Flair ---
 st.markdown(
     """
-    <style>
-    body {
-        background-color: #0d0d1a; /* Darker background for the app */
-        color: #E0E0E0; /* Light grey for general text */
-    }
-    .stApp {
-        background-color: #0d0d1a; /* Darker background for the entire app */
-    }
-    .futuristic-title {
-        font-size: 3em;
-        text-align: center;
-        color: #00FFFF; /* Aqua - common futuristic color */
-        text-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF;
-        margin-bottom: 0.5em;
-    }
-    .futuristic-subtitle {
-        font-size: 1.2em;
-        text-align: center;
-        color: #A0EEFF;
-        margin-bottom: 2em;
-    }
-    .stFileUploader {
-        background-color: #1a1a2e; /* Darker background for sections */
-        border-radius: 10px;
-        padding: 20px;
-        border: 2px solid #00FFFF;
-        box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-    }
-    .stDownloadButton button {
-        background-color: #00FF00; /* Green for download */
-        color: black;
-        font-weight: bold;
-        border-radius: 8px;
-        padding: 10px 20px;
-        font-size: 1.1em;
-        border: none;
-        box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
-        transition: all 0.3s ease-in-out;
-    }
-    .stDownloadButton button:hover {
-        background-color: #00CC00;
-        box-shadow: 0 0 15px rgba(0, 255, 0, 1);
-        transform: scale(1.05);
-    }
-    .stVideo {
-        border: 2px solid #8A2BE2; /* Purple border for video preview */
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(138, 43, 226, 0.7);
-    }
-    .stProgress > div > div > div > div {
-        background-color: #FFD700; /* Gold for progress bar */
-        border-radius: 5px;
-    }
-    /* Notification style */
-    .save-notification {
-        background-color: #2e0050; /* Dark purple */
-        border-left: 5px solid #8A2BE2; /* Matching purple border */
-        padding: 15px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
-        color: #E0E0E0;
-    }
-    .save-notification strong {
-        color: #FFD700; /* Gold for emphasis */
-    }
-    </style>
     <h1 class="futuristic-title">🌌 Chronos-Compressor 🚀</h1>
     <p class="futuristic-subtitle">Harnessing quantum algorithms to bend time and space for ultimate video optimization!</p>
     ---
@@ -111,9 +49,6 @@ if uploaded_file is not None:
     st.info(f"Detected inbound data stream: `{uploaded_file.name}` ({original_size_mb:.2f} MB)")
 
     # --- Engaging message during initial file upload/processing ---
-    # While Streamlit's file_uploader doesn't show real-time progress,
-    # the act of processing the BytesIO object can take a moment for large files.
-    # We can simulate this with a spinner and a message.
     with st.spinner("🚀 Activating wormhole for data transfer..."):
         time.sleep(0.5) # Simulate slight network latency
         st.write("📡 Inbound data stream validation initiated...")
