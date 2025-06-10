@@ -2,7 +2,7 @@ import streamlit as st
 import os
 import moviepy.editor as mp
 import tempfile
-import time # For simulating longer processes with st.spinner
+import time
 
 # --- Configuration for a Futuristic Vibe ---
 COMPRESSION_PRESETS = {
@@ -19,8 +19,6 @@ st.set_page_config(
 )
 
 # --- Inject Custom CSS ---
-# Load the custom CSS file and inject it into the Streamlit app
-# This assumes style.css is in the same directory as app.py
 with open("style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
@@ -50,9 +48,9 @@ if uploaded_file is not None:
 
     # --- Engaging message during initial file upload/processing ---
     with st.spinner("🚀 Activating wormhole for data transfer..."):
-        time.sleep(0.5) # Simulate slight network latency
+        time.sleep(0.5)
         st.write("📡 Inbound data stream validation initiated...")
-        time.sleep(0.5) # Simulate validation
+        time.sleep(0.5)
 
     # Optional: show a preview of the uploaded video
     st.markdown("### Pre-Compression Aetherialization Preview:")
@@ -64,7 +62,7 @@ if uploaded_file is not None:
     selected_preset_label = st.selectbox(
         "Choose your compression intensity:",
         options=list(COMPRESSION_PRESETS.keys()),
-        index=1, # Default to Balanced
+        index=1,
         help="Quantum-Compressed for maximum space-saving, Stellar-Quality for minimal data loss."
     )
     compression_bitrate = COMPRESSION_PRESETS[selected_preset_label]
@@ -87,7 +85,7 @@ if uploaded_file is not None:
         st.markdown("### Initiating Compression Sequence...")
         
         # --- Dynamic Progress & Detailed Feedback during Compression ---
-        status_message_container = st.empty() # Placeholder for changing status messages
+        status_message_container = st.empty()
         progress_bar_container = st.progress(0)
 
         try:
@@ -97,13 +95,13 @@ if uploaded_file is not None:
             status_message_container.info("🌀 Engaging Chronos-Core processors... Standby for quantum computation.")
             current_progress += 10
             progress_bar_container.progress(current_progress)
-            time.sleep(1) # Simulate complex initialization
+            time.sleep(1)
 
             # Stage 2: Loading Data Stream
             status_message_container.info("🌌 Calibrating quantum video stream... Analyzing temporal data structure.")
             current_progress += 15
             progress_bar_container.progress(current_progress)
-            time.sleep(1.5) # Simulate data stream analysis
+            time.sleep(1.5)
 
             video_clip = mp.VideoFileClip(uploaded_file_path)
             
@@ -111,7 +109,6 @@ if uploaded_file is not None:
             status_message_container.info("🧬 Applying compression algorithms to data stream... Optimizing spacetime efficiency.")
             current_progress += 25
             progress_bar_container.progress(current_progress)
-            # The actual write_videofile takes time, acting as the main "waiting" period
             video_clip.write_videofile(
                 output_file_path,
                 codec="libx264",
@@ -124,11 +121,11 @@ if uploaded_file is not None:
 
             # Stage 4: Finalizing & Verifying
             status_message_container.info("✔️ Verifying temporal integrity of optimized stream... Finalizing data packets.")
-            current_progress = 90 # Jump close to end
+            current_progress = 90
             progress_bar_container.progress(current_progress)
-            time.sleep(0.8) # Simulate finalization
+            time.sleep(0.8)
 
-            progress_bar_container.progress(100) # Complete progress
+            progress_bar_container.progress(100)
             status_message_container.success("✅ Compression sequence complete! Temporal data stream optimized.")
             
             # --- Calculate and Display Savings ---
@@ -138,7 +135,6 @@ if uploaded_file is not None:
             bytes_saved = original_size_bytes - compressed_size_bytes
             percentage_saved = (bytes_saved / original_size_bytes) * 100 if original_size_bytes > 0 else 0
 
-            # Display notification using markdown for custom styling
             st.markdown(f"""
             <div class="save-notification">
                 <h3>💾 Transmission Report: Compression Achieved!</h3>
@@ -149,7 +145,7 @@ if uploaded_file is not None:
             </div>
             """, unsafe_allow_html=True)
 
-            st.balloons() # Celebrate!
+            st.balloons()
 
             # --- Download Button with Thematic Text ---
             st.markdown("### Download Your Optimized Temporal Data Stream:")
@@ -158,7 +154,7 @@ if uploaded_file is not None:
                     label="⬇️ Download Optimized Video File ⬇️",
                     data=f.read(),
                     file_name=output_filename,
-                    mime="video/mp4" # Ensure correct MIME type
+                    mime="video/mp4"
                 )
             st.info("Your video is now ready for re-entry into the spacetime continuum.")
 
@@ -166,12 +162,53 @@ if uploaded_file is not None:
             st.error(f"⚠️ Temporal anomaly detected: {e}")
             st.error("Protocol failure during compression. This could be due to corrupted data stream or an unforeseen spacetime distortion.")
             st.help("Ensure your original data stream is stable. If anomalies persist, contact Chronos-Compressor support.")
-            st.stop() # Stop further execution if an error occurs
+            st.stop()
 
 else:
     st.info("Awaiting inbound video data stream... Please upload a file to begin the compression sequence.")
 
+# --- Developer / Recruiter Information Section (New!) ---
+st.markdown("---") # Separator before the new section
+st.markdown(
+    """
+    <div class="creator-nexus">
+        <h3 class="nexus-title">🚀 CREATOR NEXUS: Engaging Quantum Talent 🚀</h3>
+        <p class="nexus-intro">
+            This Chronos-Compressor module was engineered by a human innovator
+            specializing in **data-driven solutions and intuitive analytical architectures.**
+        </p>
+
+        <div class="developer-card">
+            <h4 class="card-name">🌌 Samuel Amoakoh 🌌</h4>
+            <p class="card-role">
+                <strong>System Architect | Data Integrator | UX Visionary</strong>
+                <br>
+                Empowering organizations to navigate complex data streams and derive actionable intelligence through robust and elegant applications.
+            </p>
+            <p class="card-contact">
+                <span class="contact-label">// DATA TRANSMISSION PROTOCOLS //</span>
+                <br>
+                <a href="mailto:p.samuelamoakoh@gmail.com" class="contact-link">📧 p.samuelamoakoh@gmail.com</a>
+                <br>
+                <a href="https://www.linkedin.com/in/samuel-amoakoh" target="_blank" class="contact-link">🔗 LinkedIn: /in/samuel-amoakoh</a>
+                <br>
+                <a href="https://github.com/amoakoh22" target="_blank" class="contact-link">💻 GitHub: /amoakoh22</a>
+            </p>
+        </div>
+
+        <p class="ai-attribution">
+            <span class="ai-label">✨ AI-Augmented Development Log:</span>
+            <br>
+            This application's core architecture and conceptual framework were dynamically co-piloted by advanced generative AI,
+            specifically <strong style="color:#FFD700;">Gemini AI</strong>. Leveraging its synthetic intelligence accelerated
+            design iteration and optimized structural integrity.
+        </p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown("---") # Final separator
+
 # --- Footer with a Futuristic Touch ---
-st.markdown("---")
-st.markdown("🌐 Chronos-Compressor v1.0 | A product of StellarNet Dynamics Corporation | Ensuring efficient data transmission across all galaxies.")
+st.markdown("🌐 Chronos-Compressor v1.0 | A product of VibeCoding and Ingenuity | Ensuring efficient data transmission across all galaxies.")
 st.markdown("<p style='font-size:0.8em; text-align:center;'>Powered by Streamlit and MoviePy's time-bending capabilities.</p>", unsafe_allow_html=True)

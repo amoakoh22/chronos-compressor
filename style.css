@@ -83,3 +83,85 @@ body {
 .save-notification strong {
     color: #FFD700; /* Gold for emphasis */
 }
+
+/* --- New Developer/Recruiter Section Styles --- */
+.creator-nexus {
+    background-color: #1a1a2e; /* Dark background */
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 50px;
+    border: 2px solid #8A2BE2; /* Purple border */
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.7); /* Stronger glow */
+    text-align: center;
+}
+
+.nexus-title {
+    font-size: 2.2em;
+    color: #00FFFF; /* Aqua */
+    text-shadow: 0 0 8px #00FFFF, 0 0 15px #00FFFF;
+    margin-bottom: 1em;
+}
+
+.nexus-intro {
+    font-size: 1.1em;
+    color: #A0EEFF;
+    margin-bottom: 2em;
+    line-height: 1.5;
+}
+
+.developer-card {
+    background-color: #0d0d1a; /* Even darker inner card */
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid #00FFFF; /* Aqua border */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    margin: 0 auto 2em auto; /* Center the card, add bottom margin */
+    max-width: 600px; /* Constrain width for better readability */
+}
+
+.card-name {
+    font-size: 1.8em;
+    color: #FFD700; /* Gold */
+    text-shadow: 0 0 5px #FFD700;
+    margin-bottom: 0.5em;
+}
+
+.card-role {
+    font-size: 1em;
+    color: #E0E0E0;
+    line-height: 1.4;
+    margin-bottom: 1.5em;
+}
+
+.contact-label {
+    color: #00FF00; /* Green */
+    font-weight: bold;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+}
+
+.contact-link {
+    color: #A0EEFF; /* Light blue */
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: 0.5em;
+    display: block; /* Each link on new line */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.contact-link:hover {
+    color: #00FFFF; /* Aqua on hover */
+    text-shadow: 0 0 5px #00FFFF;
+}
+
+.ai-attribution {
+    font-size: 0.95em;
+    color: #B0B0B0; /* Slightly muted for attribution */
+    margin-top: 2em;
+    line-height: 1.4;
+}
+
+.ai-label {
+    font-weight: bold;
+    color: #FFD700; /* Gold for emphasis */
+}
